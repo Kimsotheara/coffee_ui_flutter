@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:learning/widgets/common_widget.dart';
 
 class Summary extends StatelessWidget {
@@ -14,12 +12,12 @@ class Summary extends StatelessWidget {
           "Summary",
           style: TextStyle(
             color: Colors.brown,
-            fontSize: 30,
+            fontSize: 20,
           ),
         ),
         backgroundColor: Colors.brown[50],
         elevation: 0,
-        toolbarHeight: 100,
+        toolbarHeight: 50,
       ),
       body: content(),
     );
@@ -32,11 +30,11 @@ class Summary extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            height: 200,
+            height: 150,
             child: Image.asset('assets/image.png'),
           ),
           SizedBox(
-            height: 20,
+            height: 10,
           ),
           Column(
             children: [
@@ -48,7 +46,7 @@ class Summary extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -73,26 +71,26 @@ class Summary extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 15,
               ),
               Text(
                 "---------------------------------------------",
                 style: TextStyle(color: Colors.brown),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               summaryDisplay("Total", "XXX.XX"),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               summaryDisplay("Tax", "XX.XX"),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               summaryDisplay("Discount", "X.XX"),
               SizedBox(
-                height: 100,
+                height: 20,
               ),
               submitButton("Pay")
             ],

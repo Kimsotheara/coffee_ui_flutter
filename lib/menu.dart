@@ -20,19 +20,19 @@ class Menu extends StatelessWidget {
           "MENU",
           style: TextStyle(
             color: Colors.brown,
-            fontSize: 40,
+            fontSize: 30,
             fontStyle: FontStyle.italic,
           ),
         ),
         backgroundColor: Colors.brown[50],
-        toolbarHeight: 100,
+        toolbarHeight: 50,
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
             child: Icon(
               Icons.search,
               color: Colors.brown,
-              size: 40,
+              size: 20,
             ),
           )
         ],
@@ -48,16 +48,16 @@ class Menu extends StatelessWidget {
   Widget content(List<String> coffeeTitle) {
     return Column(
       children: [
-        SizedBox(
-          height: 20,
-        ),
+        // SizedBox(
+        //   height: 10,
+        // ),
         Padding(
           padding: const EdgeInsets.only(left: 20.0),
           child: Text.rich(
             TextSpan(
                 text: "It's Great ",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 20,
                   color: Colors.brown[900],
                 ),
                 children: [
@@ -65,21 +65,21 @@ class Menu extends StatelessWidget {
                     text: "Day for Coffee.",
                     style: TextStyle(
                       color: Colors.brown,
-                      fontSize: 40,
+                      fontSize: 20,
                     ),
                   ),
                 ]),
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 10,
         ),
         ListView.builder(
             itemCount: coffeeTitle.length,
             shrinkWrap: true,
             itemBuilder: ((context, index) {
               return Padding(
-                padding: const EdgeInsets.all(25.0),
+                padding: const EdgeInsets.all(15.0),
                 child: ListTile(
                   leading: Image.asset('assets/coffee_cup.png'),
                   title: Text(
@@ -93,7 +93,8 @@ class Menu extends StatelessWidget {
                     onTap: (() => Navigator.of(context).pushNamed('/details')),
                     child: Icon(
                       Icons.keyboard_arrow_right,
-                      size: 30,
+                      color: Colors.black,
+                      size: 25,
                     ),
                   ),
                 ),

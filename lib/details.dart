@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:learning/widgets/common_widget.dart';
 
 class Details extends StatelessWidget {
@@ -15,7 +13,7 @@ class Details extends StatelessWidget {
           style: TextStyle(color: Colors.brown, fontSize: 30),
         ),
         backgroundColor: Colors.brown[50],
-        toolbarHeight: 100,
+        toolbarHeight: 50,
         elevation: 0,
       ),
       body: content(context),
@@ -28,12 +26,12 @@ class Details extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            height: 200,
+            height: 150,
             color: Colors.brown[50],
             child: Image.asset('assets/coffee_cup.png'),
           ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40.0),
@@ -66,7 +64,7 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 15,
                 ),
                 Text(
                   "Size",
@@ -93,7 +91,7 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 15,
                 ),
                 Text(
                   "Sugar",
@@ -115,7 +113,7 @@ class Details extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 40,
+                      width: 15,
                     ),
                     Text(
                       "25%",
@@ -125,7 +123,7 @@ class Details extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 40,
+                      width: 15,
                     ),
                     Text(
                       "50%",
@@ -135,7 +133,7 @@ class Details extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 40,
+                      width: 15,
                     ),
                     Text(
                       "100%",
@@ -150,7 +148,7 @@ class Details extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 80,
+            height: 15,
           ),
           GestureDetector(
               onTap: (() => Navigator.of(context).pushNamed("/summary")),
